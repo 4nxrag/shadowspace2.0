@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-[#0d0d0d] text-zinc-200 font-sans overflow-x-hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-700;
+  }
+}
+
+@layer components {
+  /* Glass Card Base - Mobile Optimized */
+  .glass-card {
+    @apply bg-glass-dark backdrop-blur-glass border border-glass-border rounded-2xl 
+           shadow-2xl transition-all duration-300;
+    /* Avoid heavy blur on low-end mobile devices */
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  }
+
+  .glass-card:hover {
+    @apply border-white/20 shadow-3xl;
+    transform: translateY(-2px);
+  }
+
+  /* Input fields */
+  .glass-input {
+    @apply w-full px-4 py-3 bg-zinc-900/50 border border-zinc-800 
+           rounded-xl text-zinc-200 placeholder-zinc-500 
+           focus:outline-none focus:border-accent focus:ring-2 
+           focus:ring-accent/20 transition-all duration-200;
+  }
+
+  /* Buttons - No cartoonish effects */
+  .btn-primary {
+    @apply px-6 py-3 bg-accent hover:bg-accent-hover text-white 
+           rounded-xl font-medium transition-all duration-200 
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 
+           rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  /* Icon buttons */
+  .icon-btn {
+    @apply p-2 rounded-lg hover:bg-zinc-800/50 transition-colors 
+           duration-200 active:scale-95;
+  }
+}
