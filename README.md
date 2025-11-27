@@ -3,6 +3,7 @@
   <p><strong>Anonymous micro-posting platform with real-time interactions and privacy-first architecture</strong></p>
   
   <p>
+    <a href="https://shadowspace20.vercel.app/" target="_blank">🚀 Live Demo</a> •
     <a href="#-demo">Demo</a> •
     <a href="#-features">Features</a> •
     <a href="#-tech-stack">Tech Stack</a> •
