@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -14,6 +14,10 @@ export default {
       },
       backdropBlur: {
         'glass': '16px',
+      },
+      // This fixes the error by defining 'shadow-3xl'
+      boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       },
       animation: {
         'fade-in': 'fadeIn 0.4s ease-in-out',
