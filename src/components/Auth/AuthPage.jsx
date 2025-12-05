@@ -74,6 +74,7 @@ export default function AuthPage() {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                onBlur={(e) => setUsername(e.target.value.trim())}
                 className="glass-input"
                 placeholder="Choose a unique username"
                 required
@@ -95,6 +96,7 @@ export default function AuthPage() {
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  onBlur={(e) => setPassword(e.target.value.trim())}
                   className="glass-input pr-12"
                   placeholder="Enter your password"
                   required
